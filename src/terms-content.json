@@ -1,0 +1,251 @@
+{
+  "platform": {
+    "title": "Platform Terms of Service",
+    "sections": [
+      {
+        "heading": "1. Agreement and operator",
+        "paragraphs": [
+          "These Terms govern access to Cloud Nations websites, accounts and services operated by EdgeAlphix LLC (Cloud Nations, we, us). You are the individual account holder or, where you act for an organization, that organization and its authorized representative. Product-specific Residency, Organization and Identity Verification Terms apply alongside these Terms. A product-specific provision governs a conflict concerning that product.",
+          "Read the applicable terms before accepting an application or order. Prices, fees and the order description presented before confirmation form part of that order. These Terms do not replace rights that applicable law makes mandatory."
+        ]
+      },
+      {
+        "heading": "2. Accounts and authority",
+        "paragraphs": [
+          "Account holders must be at least 18 and provide accurate, current information. You must have authority to submit information, administer an organization, invite its members or authorize use of its funds. Do not share an account, identity credential, recovery code or API secret with an unauthorized person.",
+          "Protect passwords, passkeys, authenticators and recovery methods. Notify contact@edgealphix.com promptly if access or a credential may be compromised. We may require additional evidence before restoring access or changing verified information; possession of an email address or preferred name alone is not proof of identity."
+        ]
+      },
+      {
+        "heading": "3. Acceptable use",
+        "paragraphs": [
+          "Do not impersonate another person or organization; falsify verification evidence; obtain a second identifier for the same person; misrepresent a preferred name as a verified legal name; or represent expired, suspended or revoked credentials as active. Do not use the services for fraud, unlawful discrimination, harassment, unlawful financial activity or infringement of another person's rights.",
+          "Do not evade access controls, scrape restricted records, enumerate identifiers, resell private identity data, interfere with service availability or use another organization's approved API purpose as a pretext for unrelated surveillance. Report suspected security problems to support without accessing or retaining another person's private information."
+        ]
+      },
+      {
+        "heading": "4. Orders, fees and renewal",
+        "paragraphs": [
+          "Prices are stated in USD. The checkout shows the amount, any applicable disclosed charges and the payment method before confirmation. An order is fulfilled after confirmed payment and its eligibility conditions are met. A payment or application acknowledgment alone does not establish verified status.",
+          "Membership renewals are manual. We do not automatically renew or debit a membership. Discounts apply only under their stated scope, expiration and redemption limits. Failed, refunded or disputed payments may affect the associated entitlement, subject to review and applicable law. Product application fees are non-refundable as stated in the applicable product terms, except where a refund is required by law or expressly agreed by us. Duplicate or erroneous charges should be reported with the order number."
+        ]
+      },
+      {
+        "heading": "5. Prepaid Wallet",
+        "paragraphs": [
+          "Prepaid Wallet is a USD-denominated balance for eligible Cloud Nations purchases. It is separate from Cloud Credits and from any linked blockchain wallet. Product eligibility still applies when paying from the balance. It does not provide a bank account, interest, peer-to-peer transfers or a general cash withdrawal facility.",
+          "Orders below $10 use Prepaid Wallet; orders of $10 or more may use either the balance or direct card checkout. For a top-up below $10, checkout discloses an additional processing amount calculated to cover 2.9% plus $0.30, rounded to cents. Top-ups of $10 or more have no added processing fee. The displayed wallet credit and total charge are separate amounts.",
+          "A top-up credits the account after confirmed payment. Reversed or disputed top-ups can result in a hold or balance adjustment; a hold does not create permission to spend money not available in the account. Transaction history records charges and corrections. Report an unauthorized payment or ledger error promptly. Account closure does not itself settle an outstanding balance; contact support for reconciliation and any refund required by law."
+        ]
+      },
+      {
+        "heading": "6. Credits and activities",
+        "paragraphs": [
+          "Cloud Credits are internal community points. They cannot be transferred, withdrawn as money or used to obtain identity verification. Rewards depend on confirmed participation and the applicable activity rules. A cosmetic badge does not establish verified status.",
+          "Registration is subject to capacity, eligibility and the displayed activity terms. Before an activity begins, you may cancel and receive the CC actually deducted for that registration. An existing access entitlement does not generate an extra refund. Organizer cancellation returns the deducted CC. Self-service cancellation closes when the activity starts. Activity schedules and locations may change; registered users receive the applicable notice."
+        ]
+      },
+      {
+        "heading": "7. Profiles, identity disclosure and API use",
+        "paragraphs": [
+          "Profile disclosure, QR disclosure and connected-app consent are distinct controls. Legal names and preferred names remain separately identified. Public identifier lookup returns only the supported information permitted by public disclosure settings; enabling full-number lookup makes that identifier usable for public retrieval.",
+          "OIDC applications receive the scopes and information authorized for that connection. Separately, an approved organization identity API may disclose administrator-approved categories of nonpublic identity or organization information for its documented purpose, such as event identity checks. That access does not require a separate holder approval for each lookup. Access is bounded by its approved fields, purpose, expiry and quota, and is audited for administrators.",
+          "An organization or developer receiving data must have a lawful basis for its use, provide any notices required of it, secure the data and restrict its staff and processors to the approved purpose. Do not sell the data, build unrelated profiles or retain it longer than the purpose requires. Notify us promptly of unauthorized access or disclosure and cooperate with containment. API approval is not a substitute for the recipient's legal obligations."
+        ]
+      },
+      {
+        "heading": "8. Developers and connected services",
+        "paragraphs": [
+          "Register accurate application details and exact redirect URIs. Protect client secrets and API keys, use approved scopes and honor revocation and live credential status. Do not represent a basic account as government-ID verified or use a preferred name claim as a legal-name claim.",
+          "Integration limits, granted fields and permissions may change for security or compliance reasons. API credentials may be suspended or revoked when eligibility ends or use breaches the approved purpose. Third-party applications, Wallet providers and blockchain networks operate under their own terms. Cloud Nations does not control their availability or decisions."
+        ]
+      },
+      {
+        "heading": "9. Content and intellectual property",
+        "paragraphs": [
+          "You retain rights in information and content you submit. You authorize us to host, display, process and reproduce it only as needed to operate the services, produce requested credentials and apply your disclosure settings. You must have the rights and permissions needed for that use.",
+          "Cloud Nations software, branding and credential designs remain the property of their respective owners. You may display an issued badge or credential for its intended purpose while accurately showing its current status. Do not alter an official credential, signature proof or system-controlled verification result."
+        ]
+      },
+      {
+        "heading": "10. Suspension, closure and remedies",
+        "paragraphs": [
+          "We may restrict access, a credential, an API grant or an organization where payment is reversed, identity or authority is unresolved, a material breach is identified, or action is reasonably necessary to protect users or comply with law. A security incident may require immediate action. Where practicable, we provide the reason and a way to contact support for review; notices may be limited where disclosure is legally prohibited or would compromise security.",
+          "Closure or revocation does not reassign a CNID or CNOID. Required number-reservation, payment and audit records are handled separately from profile deletion. A restriction does not automatically resolve an outstanding order, refund or organizational dispute. Applicable rights to challenge a payment, request information or obtain a remedy remain available."
+        ]
+      },
+      {
+        "heading": "11. Service scope and responsibility",
+        "paragraphs": [
+          "Verification records and credentials report the results and status within Cloud Nations; they do not guarantee that every third party will accept them or that a linked organization or wallet is safe. A third party must assess whether the information satisfies its own legal or operational requirements.",
+          "We use reasonable care in operating the services. They may be unavailable during maintenance or incidents, and announced future features are not included unless delivered in an order. We do not promise uninterrupted operation, investment returns or a particular third-party acceptance decision. Nothing in these Terms excludes responsibility or remedies that cannot lawfully be excluded, including applicable consumer rights."
+        ]
+      },
+      {
+        "heading": "12. Changes and contact",
+        "paragraphs": [
+          "We may revise these Terms for product, security or legal changes. The current page identifies its version and date. Material changes affecting an ongoing paid service will be communicated through the account or another available contact method; changes do not retrospectively alter an accepted order or a stored consent record. A new affirmative agreement will be requested where required.",
+          "Contact EdgeAlphix LLC at contact@edgealphix.com for support, complaints, billing disputes or legal notices concerning Cloud Nations. Include the relevant application, organization or order reference, but do not send passwords, recovery codes or government document images by ordinary email. If a provision is unenforceable, the remaining provisions continue to apply to the extent permitted by law. A delay in enforcing a provision is not a waiver of it."
+        ]
+      }
+    ]
+  },
+  "residency": {
+    "title": "Cloud Residency Terms of Service",
+    "sections": [
+      {
+        "heading": "1. Membership and agreement",
+        "paragraphs": [
+          "Cloud Residency is a private digital identity and community membership operated by EdgeAlphix LLC. These Terms and the Platform Terms of Service govern your application, membership and resident credentials. Membership does not confer government nationality, immigration status, legal residence rights, diplomatic status or a travel document, and does not establish a legal entity or bank account."
+        ]
+      },
+      {
+        "heading": "2. Eligibility and one-person rule",
+        "paragraphs": [
+          "You must be at least 18 and apply as yourself using accurate information. Each natural person may hold one permanent CNID. Creating another account, using a different document or changing personal details does not permit a second number.",
+          "Identity verification, adult eligibility and duplicate-identity checks must pass before a CNID or resident credential is issued. An application may be resumed for requested information or a technical failure. A duplicate finding can require review or recovery of the original account; it does not authorize a fresh identity."
+        ]
+      },
+      {
+        "heading": "3. Application fee and membership term",
+        "paragraphs": [
+          "The $19.99 application fee purchases five years of membership and includes KYC. The period starts when payment succeeds; later verification does not restart or extend it. Payment does not guarantee verification approval. The application fee is non-refundable, including where verification is declined or left incomplete, except where a refund is required by applicable law or expressly agreed by us.",
+          "An account may use the available basic features after payment without verified status. CNID, Digital Resident ID, resident certificates, Wallet credentials and verified identity assertions require completed verification. Renewal is manual and does not involve automatic recurring charges."
+        ]
+      },
+      {
+        "heading": "4. Permanent number and renewable credentials",
+        "paragraphs": [
+          "Your CNID remains assigned to you and is never recycled. Membership, account access and individual credentials have separate statuses. An expired membership retains its number and supported history, while resident credentials show expiry. Suspension or revocation removes the corresponding benefits and updates live verification.",
+          "Downloaded images, PDFs and saved Wallet passes are copies or snapshots. A signature proof establishes the signed file and issuer record; current validity must be checked through live verification. A founding badge is issued to the first 10,000 real CNID recipients only if issuance also occurs before January 1, 2028 UTC, whichever limit is reached first."
+        ]
+      },
+      {
+        "heading": "5. Names and identity updates",
+        "paragraphs": [
+          "A verified legal name is distinct from a self-selected preferred name. A preferred name may appear separately on supported profiles, greetings, disclosures and ID fields, but must not be presented as the verified legal name. System-controlled identity results cannot be edited through profile settings.",
+          "A verified identity update costs $4.99 per request and may include multiple supported changes in that request. Updated identity information requires verification that you are the original holder. A new person's document cannot replace an existing holder's identity. Failed or inconclusive matching leaves the original identity unchanged. Date-of-birth corrections require support review. Payment does not guarantee that a requested update will be approved."
+        ]
+      },
+      {
+        "heading": "6. Disclosure and connected applications",
+        "paragraphs": [
+          "You control the supported public profile and QR fields independently. Legal and preferred name fields retain their types. Consent to one OIDC application is separate from public settings and may be revoked in account settings.",
+          "The Platform Terms describe the additional administrator-approved organization API route, including purpose-limited access to approved nonpublic fields and administrator audits. Do not assume that hiding a public field prevents all authorized operational disclosures described in those terms and the privacy notice."
+        ]
+      },
+      {
+        "heading": "7. Linked wallets",
+        "paragraphs": [
+          "You may link a self-custody address by proving control. A valid signature establishes the verified address association at the time of the check. It does not guarantee exclusive ownership, lawful funds or continuing access. Cloud Nations does not hold your private keys, custody blockchain assets or execute transactions for you. Protect signing devices and review every wallet prompt."
+        ]
+      },
+      {
+        "heading": "8. Restrictions and support",
+        "paragraphs": [
+          "Fraud, impersonation, duplicate identities, altered credentials or misuse of private data can lead to review, suspension or revocation under the Platform Terms. Keep account and verified details accurate and contact support when identity or access changes. Mandatory legal remedies remain available.",
+          "For an application, identity correction, review or account recovery, contact contact@edgealphix.com with your Application Number. Do not send government document images, passwords or codes through ordinary email."
+        ]
+      }
+    ]
+  },
+  "organizations": {
+    "title": "Organization Terms of Service",
+    "sections": [
+      {
+        "heading": "1. Registration and authority",
+        "paragraphs": [
+          "These Terms govern Cloud Nations Organization registration, verified legal organization services and associated tools operated by EdgeAlphix LLC. They apply with the Platform Terms of Service. You must be authorized to act for the organization, and its creator must hold an active verified CNID.",
+          "A CNO is registered within the Cloud Nations platform. Its name, suffix, filing and Certificate of Organization do not create a government-registered legal entity, separate legal personality, limited liability, a tax classification or a bank account. Using Trust, Foundation, Partnership, Association or another supported suffix does not confer the legal status associated with that word. A verified legal organization must already have the relevant legal existence and complete the required KYB checks."
+        ]
+      },
+      {
+        "heading": "2. Fees, term and issuance",
+        "paragraphs": [
+          "CNO registration costs $19.99 for five years. Verified legal organization registration costs $49.99 for five years, subject to business and required representative verification. The term begins at confirmed payment. Application fees are non-refundable except where required by law or expressly agreed by us.",
+          "CNO approval and CNOID issuance normally proceed automatically after payment and eligibility checks. Risk, unresolved eligibility or a configured review requirement may stop automatic issuance. Legal organization issuance requires the applicable KYB approval. Payment does not guarantee approval. Renewal is manual."
+        ]
+      },
+      {
+        "heading": "3. Names and amendments",
+        "paragraphs": [
+          "Enter the complete name with a supported terminal suffix for a CNO. The exact approved full name is used on organization records and certificates. Name availability disregards supported suffix variants, letter case and redundant spacing; changing only a suffix does not make an occupied base name available. Availability at entry does not reserve the name until registration succeeds.",
+          "You must not use a misleading name, impersonate another organization or infringe naming rights. Platform availability is not trademark clearance or a government name reservation. A name amendment costs $4.99 and may change the name, suffix or both in one request. It is checked again at completion. A successful amendment retains the CNOID and original registration date, records the filing and issues a new credential."
+        ]
+      },
+      {
+        "heading": "4. Permanent registry and certificates",
+        "paragraphs": [
+          "A CNOID is permanent, immutable and never reassigned. Membership and credential status are renewable and may expire, be suspended or be revoked. A Certificate of Organization records the issued platform registration. A Certificate of Good Standing records the eligible active membership at its issue time; it is not a guarantee of solvency, creditworthiness or legal compliance.",
+          "Certificates and filing records are snapshots. Check the current verification record before relying on a credential. Public registry listing, filings, member information and certificate downloads depend on the supported disclosure settings. Publication can reveal historical names and dates; check the public preview before enabling it."
+        ]
+      },
+      {
+        "heading": "5. Members, officers and governance",
+        "paragraphs": [
+          "Owner, Admin and Member roles determine permissions within Cloud Nations. Officer titles, including President, CEO, Secretary and Treasurer, and board meetings, votes, resolutions and minutes are records maintained by the organization. They do not override the organization's own rules or applicable law.",
+          "The Owner is responsible for authorized administrators, membership records, invitations and ownership transfers. Keep representative authority current and remove access that is no longer authorized. Review the recipient before transferring ownership; a transfer changes control of platform records and invalidates associated API keys. A member registry or vote does not independently prove a person's legal authority to bind an entity."
+        ]
+      },
+      {
+        "heading": "6. Domains, SSO and organization API",
+        "paragraphs": [
+          "Domain verification establishes control of the checked domain at the time of verification. It is distinct from KYB and does not establish ownership of a trademark or legal entity. Organization SSO uses the approved OIDC connection and current membership; application administrators must honor consent, permission changes and revoked access.",
+          "Extended identity API access requires manual platform approval for specific fields, purpose, expiry and quota. It is not included merely by registering or verifying an organization. The recipient must use the data only for that purpose, protect it and comply with applicable notice, authorization and retention obligations. Administrators may audit use and revoke access."
+        ]
+      },
+      {
+        "heading": "7. Noncustodial treasury and signers",
+        "paragraphs": [
+          "Organizations may link supported blockchain addresses and Safe multisignature wallets through control proofs, and associate verified members with signers. The displayed treasury and signer information reflects the checks and on-chain data available at the time; ownership, threshold, balances and signer control can change.",
+          "Cloud Nations does not hold private keys, custody funds, sign transactions or undertake investment, banking, fiduciary or trustee duties. The organization and its signers are responsible for transactions, donations, permissions, taxes and compliance. A platform officer appointment does not make that person a wallet signer; a verified signer association does not grant signing power. Review actual on-chain owners and thresholds before acting."
+        ]
+      },
+      {
+        "heading": "8. Restrictions, disputes and contact",
+        "paragraphs": [
+          "An organization may be restricted for unresolved verification, expired membership, reversed payment, unauthorized representation, naming abuse or misuse of its records, API access or linked wallets. We may request evidence of authority and restrict changes while a genuine control dispute is reviewed.",
+          "Platform review does not adjudicate a court dispute, transfer blockchain assets or replace an organization's legal obligations. Mandatory rights and remedies are preserved. Contact contact@edgealphix.com with the CNOID or application reference for a name dispute, representative change, registration review or billing issue."
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "title": "Identity Verification Terms",
+    "sections": [
+      {
+        "heading": "1. Verification request",
+        "paragraphs": [
+          "EdgeAlphix LLC uses Didit to perform government-document verification, liveness, face matching and repeat-application detection for Cloud Nations. These Terms apply with the Platform and relevant product terms. Start a check only for your own identity or, in an authorized KYB workflow, the specified representative. Use genuine, current documents and accurate information."
+        ]
+      },
+      {
+        "heading": "2. Information and biometric processing",
+        "paragraphs": [
+          "Verification may collect document information and images, a facial portrait, liveness recordings, biometric comparison information and device or session data. Didit processes the hosted verification. The check compares the submitted person and document and evaluates duplicate or same-person evidence; additional information or review may be requested.",
+          "By affirmatively accepting these Terms and starting the check, you authorize the described verification processing to the extent consent is the applicable basis. Didit's separate verification terms and privacy notice explain its processing. If you do not proceed, a number or verified credential cannot be issued or updated through that check. Contact support for questions or applicable privacy rights."
+        ]
+      },
+      {
+        "heading": "3. Retention and separation",
+        "paragraphs": [
+          "The configured provider retention is five years for verification records and up to 1,825 days for face templates used to identify repeat applications. Cloud Nations stores necessary results, provider references, protected identity details and encrypted duplicate-check indexes. Raw government-document images and liveness recordings remain with Didit rather than Cloud Nations application storage.",
+          "Cloud Nations retains a verified portrait for the Digital Resident ID only when you select that option. A profile avatar is separate. Permanent number reservation, payment and audit records are retained independently where needed to operate the one-person rule, resolve transactions or meet legal obligations. Provider deletion and account closure are separate requests; contact support to coordinate an applicable request."
+        ]
+      },
+      {
+        "heading": "4. Decisions, retries and updates",
+        "paragraphs": [
+          "Verification success alone does not override payment, adult eligibility, duplicate checks or organization representative requirements. A browser return or screenshot is not an approval. A technical failure or request for information may be resumed under the same application.",
+          "An identity update must match the original holder. Inconclusive or conflicting evidence does not replace the existing identity. Date-of-birth differences are held for support review. Do not submit another person's document or bypass a review by creating a new account. You may contact support with the application or update reference to request review of a result."
+        ]
+      },
+      {
+        "heading": "5. Security and contact",
+        "paragraphs": [
+          "Use the verification service presented in your account. Do not email raw documents, liveness recordings, passwords or verification codes to support. Contact contact@edgealphix.com for a verification question, correction request or privacy inquiry. These Terms do not waive applicable privacy, biometric or consumer rights."
+        ]
+      }
+    ]
+  }
+}
