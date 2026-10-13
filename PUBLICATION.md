@@ -1,0 +1,32 @@
+# Website publication
+
+The user approved publication on October 13, 2026.
+
+- Repository: https://github.com/EdwardLab/CloudNations-website
+- Host: GitHub Pages, custom GitHub Actions workflow; manual dispatch only.
+- Canonical origin: https://cloudnations.org
+- Support: https://cloudnations.org/support/
+- DNS: four GitHub Pages apex A records and www CNAME to edwardlab.github.io; Cloudflare-proxied with automatic TTL.
+- Existing identity-platform record and all mail records are preserved.
+- Contact mailbox: Cloudflare Email Routing shows contact@edgealphix.com Active. No test email was sent.
+- GitHub Actions deployment passed. Cloudflare serves HTTPS while the GitHub origin certificate is pending. The existing Full encryption mode is unchanged. A website-only redirect upgrades HTTP to the canonical HTTPS origin and preserves paths and query strings. Public HTTPS, HTTP upgrades and www redirects are verified. All five pages, twelve assets and the custom 404 passed public acceptance. HTML matches the approved build after decoding Cloudflare’s email protection; asset hashes match exactly.
+
+Visitor pages contain product information and support steps. Issuer configuration and release procedures are kept out of page copy. The Google Wallet business form has the website, support URL and support email prepared; its remaining required business category needs completion before saving.
+
+## Source updates
+
+```sh
+npm test
+node build.mjs --production --legal-approved
+git push origin main
+gh workflow run pages.yml -R EdwardLab/CloudNations-website -f legal_review_approved=true
+```
+
+Changes to Privacy and Terms must reflect actual operations. The source contains no credentials, customer records or private fixture output. Prior website history is backed up only in the ignored local directory before the user-requested history cleanup.
+
+
+## Public acceptance
+
+The deployed customer copy uses KYC on the homepage and in help articles. Browser checks passed for the ID front/back switch, Wallet FAQ, mobile menu, KYC help search, theme switching and support email copying. At 390 px the tested homepage and support flow have no horizontal overflow. The local preview remains available at http://127.0.0.1:3210. The identity service health endpoint still reports ok.
+
+The GitHub origin certificate remains pending; the public HTTPS certificate is served by Cloudflare. Existing zone encryption settings were not changed. Website and support URLs are ready to use in the Google Wallet console. The console form remains unsaved pending its required business category; publishing approval was not submitted.

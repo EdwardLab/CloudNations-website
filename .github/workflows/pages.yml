@@ -1,0 +1,36 @@
+name: Publish Cloud Nations website
+on:
+  workflow_dispatch:
+    inputs:
+      legal_review_approved:
+        description: Privacy and Terms have been reviewed and approved for publication
+        required: true
+        type: boolean
+        default: false
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: ${{ inputs.legal_review_approved }}
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm test
+      - run: node build.mjs --production --legal-approved
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+      - uses: actions/deploy-pages@v4
+        id: deployment

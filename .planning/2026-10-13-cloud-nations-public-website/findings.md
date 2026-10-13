@@ -1,0 +1,2 @@
+# Findings
+DigitalPlat One uses a photographic split hero, airy product compositions, concise descriptions, DM Sans and a static Pages build. Existing Cloud Nations image renderer can produce example front/back ID through an isolated in-memory fixture. The certificate renderer has database-bound calls; its test fixture must not contact any database or sign a real credential. Google Wallet remains demo pending publishing approval; Apple Wallet is deferred. Founding cutoff in source is 2028-01-01 UTC, capped at 10000 real issuances.
