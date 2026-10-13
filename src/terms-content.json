@@ -27,7 +27,7 @@
         "heading": "4. Orders, fees and renewal",
         "paragraphs": [
           "Prices are stated in USD. The checkout shows the amount, any applicable disclosed charges and the payment method before confirmation. An order is fulfilled after confirmed payment and its eligibility conditions are met. A payment or application acknowledgment alone does not establish verified status.",
-          "Membership renewals are manual. We do not automatically renew or debit a membership. Discounts apply only under their stated scope, expiration and redemption limits. Failed, refunded or disputed payments may affect the associated entitlement, subject to review and applicable law. Product application fees are non-refundable as stated in the applicable product terms, except where a refund is required by law or expressly agreed by us. Duplicate or erroneous charges should be reported with the order number."
+          "Residency renewals are manual. We do not automatically renew or debit a residency. Discounts apply only under their stated scope, expiration and redemption limits. Failed, refunded or disputed payments may affect the associated entitlement, subject to review and applicable law. Product application fees are non-refundable as stated in the applicable product terms, except where a refund is required by law or expressly agreed by us. Duplicate or erroneous charges should be reported with the order number."
         ]
       },
       {
@@ -94,9 +94,9 @@
     "title": "Cloud Residency Terms of Service",
     "sections": [
       {
-        "heading": "1. Membership and agreement",
+        "heading": "1. Residency and agreement",
         "paragraphs": [
-          "Cloud Residency is a private digital identity and community membership operated by EdgeAlphix LLC. These Terms and the Platform Terms of Service govern your application, membership and resident credentials. Membership does not confer government nationality, immigration status, legal residence rights, diplomatic status or a travel document, and does not establish a legal entity or bank account."
+          "Cloud Residency is a private residency registration in the digital identity and community network operated by EdgeAlphix LLC. These Terms and the Platform Terms of Service govern your application, residency and resident credentials. Residency does not confer government nationality, immigration status, legal residence rights, diplomatic status or a travel document, and does not establish a legal entity or bank account."
         ]
       },
       {
@@ -107,16 +107,16 @@
         ]
       },
       {
-        "heading": "3. Application fee and membership term",
+        "heading": "3. Application fee and residency term",
         "paragraphs": [
-          "The $19.99 application fee purchases five years of membership and includes KYC. The period starts when payment succeeds; later verification does not restart or extend it. Payment does not guarantee verification approval. The application fee is non-refundable, including where verification is declined or left incomplete, except where a refund is required by applicable law or expressly agreed by us.",
+          "The $19.99 application fee purchases five years of residency and includes KYC. The period starts when payment succeeds; later verification does not restart or extend it. Payment does not guarantee verification approval. The application fee is non-refundable, including where verification is declined or left incomplete, except where a refund is required by applicable law or expressly agreed by us.",
           "An account may use the available basic features after payment without verified status. CNID, Digital Resident ID, resident certificates, Wallet credentials and verified identity assertions require completed verification. Renewal is manual and does not involve automatic recurring charges."
         ]
       },
       {
         "heading": "4. Permanent number and renewable credentials",
         "paragraphs": [
-          "Your CNID remains assigned to you and is never recycled. Membership, account access and individual credentials have separate statuses. An expired membership retains its number and supported history, while resident credentials show expiry. Suspension or revocation removes the corresponding benefits and updates live verification.",
+          "Your CNID remains assigned to you and is never recycled. Residency, account access and individual credentials have separate statuses. An expired residency retains its number and supported history, while resident credentials show expiry. Suspension or revocation removes the corresponding benefits and updates live verification.",
           "Downloaded images, PDFs and saved Wallet passes are copies or snapshots. A signature proof establishes the signed file and issuer record; current validity must be checked through live verification. A founding badge is issued to the first 10,000 real CNID recipients only if issuance also occurs before January 1, 2028 UTC, whichever limit is reached first."
         ]
       },
@@ -176,7 +176,7 @@
       {
         "heading": "4. Permanent registry and certificates",
         "paragraphs": [
-          "A CNOID is permanent, immutable and never reassigned. Membership and credential status are renewable and may expire, be suspended or be revoked. A Certificate of Organization records the issued platform registration. A Certificate of Good Standing records the eligible active membership at its issue time; it is not a guarantee of solvency, creditworthiness or legal compliance.",
+          "A CNOID is permanent, immutable and never reassigned. Registration and credential status are renewable and may expire, be suspended or be revoked. A Certificate of Organization records the issued platform registration. A Certificate of Good Standing records the eligible active registration at its issue time; it is not a guarantee of solvency, creditworthiness or legal compliance.",
           "Certificates and filing records are snapshots. Check the current verification record before relying on a credential. Public registry listing, filings, member information and certificate downloads depend on the supported disclosure settings. Publication can reveal historical names and dates; check the public preview before enabling it."
         ]
       },
@@ -184,13 +184,13 @@
         "heading": "5. Members, officers and governance",
         "paragraphs": [
           "Owner, Admin and Member roles determine permissions within Cloud Nations. Officer titles, including President, CEO, Secretary and Treasurer, and board meetings, votes, resolutions and minutes are records maintained by the organization. They do not override the organization's own rules or applicable law.",
-          "The Owner is responsible for authorized administrators, membership records, invitations and ownership transfers. Keep representative authority current and remove access that is no longer authorized. Review the recipient before transferring ownership; a transfer changes control of platform records and invalidates associated API keys. A member registry or vote does not independently prove a person's legal authority to bind an entity."
+          "The Owner is responsible for authorized administrators, registration records, invitations and ownership transfers. Keep representative authority current and remove access that is no longer authorized. Review the recipient before transferring ownership; a transfer changes control of platform records and invalidates associated API keys. A member registry or vote does not independently prove a person's legal authority to bind an entity."
         ]
       },
       {
         "heading": "6. Domains, SSO and organization API",
         "paragraphs": [
-          "Domain verification establishes control of the checked domain at the time of verification. It is distinct from KYB and does not establish ownership of a trademark or legal entity. Organization SSO uses the approved OIDC connection and current membership; application administrators must honor consent, permission changes and revoked access.",
+          "Domain verification establishes control of the checked domain at the time of verification. It is distinct from KYB and does not establish ownership of a trademark or legal entity. Organization SSO uses the approved OIDC connection and current registration; application administrators must honor consent, permission changes and revoked access.",
           "Extended identity API access requires manual platform approval for specific fields, purpose, expiry and quota. It is not included merely by registering or verifying an organization. The recipient must use the data only for that purpose, protect it and comply with applicable notice, authorization and retention obligations. Administrators may audit use and revoke access."
         ]
       },
@@ -204,7 +204,7 @@
       {
         "heading": "8. Restrictions, disputes and contact",
         "paragraphs": [
-          "An organization may be restricted for unresolved verification, expired membership, reversed payment, unauthorized representation, naming abuse or misuse of its records, API access or linked wallets. We may request evidence of authority and restrict changes while a genuine control dispute is reviewed.",
+          "An organization may be restricted for unresolved verification, expired registration, reversed payment, unauthorized representation, naming abuse or misuse of its records, API access or linked wallets. We may request evidence of authority and restrict changes while a genuine control dispute is reviewed.",
           "Platform review does not adjudicate a court dispute, transfer blockchain assets or replace an organization's legal obligations. Mandatory rights and remedies are preserved. Contact contact@edgealphix.com with the CNOID or application reference for a name dispute, representative change, registration review or billing issue."
         ]
       }

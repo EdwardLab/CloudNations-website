@@ -5,11 +5,11 @@ import { site } from './src/content.mjs';
 import { home, about, support, legal, notFound, layout } from './src/templates.mjs';
 export const root = dirname(fileURLToPath(import.meta.url));
 export const routes = [
-  { path: '/', title: 'Cloud Nations | Identity Beyond Borders', description: 'Cloud Residency: a private digital identity and community membership. $19.99 for five years, with identity verification included.', render: home },
+  { path: '/', title: 'Cloud Nations | Identity Beyond Borders', description: 'Cloud Residency: a private digital identity and community participation. $19.99 for five years, with identity verification included.', render: home },
   { path: '/about/', title: 'About | Cloud Nations', description: 'A private digital identity and community network operated by EdgeAlphix LLC. One identity. Anywhere online.', render: about },
   { path: '/support/', title: 'Support | Cloud Nations', description: 'Get help with Cloud Nations applications, verification, accounts, billing, credentials and Wallet.', render: support },
   { path: '/privacy/', title: 'Privacy | Cloud Nations', description: 'How Cloud Nations handles website, account, verification and public profile information.', render: () => legal('privacy') },
-  { path: '/terms/', title: 'Membership Terms | Cloud Nations', description: 'Cloud Nations membership eligibility, application fees, verification, permanent identifiers and renewal rules.', render: () => legal('terms') },
+  { path: '/terms/', title: 'Terms of Service | Cloud Nations', description: 'Cloud Nations residency eligibility, application fees, verification, permanent identifiers and renewal rules.', render: () => legal('terms') },
   { path: '/404.html', title: 'Page not found | Cloud Nations', description: 'Return to Cloud Nations or find help with your account.', render: notFound },
 ];
 export async function build({ production = false, legalApproved = false, output = resolve(root, 'dist') } = {}) {
