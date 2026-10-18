@@ -20,4 +20,4 @@ Operator EdgeAlphix LLC; support contact@edgealphix.com. Fog white/charcoal/coba
 
 - Phase9: homepage official-site banner matching identity platform, responsive/keyboard checks and approved Pages publication — complete;348cb51 and Pages39146453487 accepted on19October2026.
 
-- Phase10: reproduce stale homepage CSS, content-fingerprint stylesheet URLs, warm-cache browser regression and Pages release — in progress.
+- Phase10: reproduce stale homepage CSS, content-fingerprint stylesheet URLs, warm-cache browser regression and Pages release — complete;7f2a32a/Pages39147690002 accepted with retained caches and ordinary Reload.

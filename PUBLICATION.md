@@ -35,3 +35,8 @@ The GitHub origin certificate remains pending; the public HTTPS certificate is s
 ## Homepage official-site banner — 19 October 2026
 
 Commit `348cb51`, published by successful manual Pages run `39146453487`, adds the identity platform’s official-site banner to the homepage. The approved domain and HTTPS guidance, cloud icon and native disclosure match the platform. Six static tests, production build, keyboard toggles, dark/light modes and320/390/768/1440px layouts pass locally. Public HTTPS content and CSS match; live desktop/mobile disclosure and screenshots pass. Identity-platform, DNS and mail settings were not changed.
+
+
+## Returning-browser CSS repair — 19 October 2026
+
+The first banner acceptance used a fresh browser and missed the four-hour cached legacy stylesheet. A returning-browser reproduction confirmed the banner HTML could load while `/styles.css` remained the pre-banner version. Commit `7f2a32a`, published by successful Pages run `39147690002`, gives every page a content-fingerprinted stylesheet filename. Seven tests pass. The same warm-cache browser loads the corrected style without clearing caches; ordinary Reload updates already-cached HTML. Public five-page asset checks and live desktop/mobile disclosure checks pass.

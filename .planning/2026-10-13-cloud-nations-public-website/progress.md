@@ -37,3 +37,9 @@
 - Root cause reproduced in a real returning browser: old stable CSS cached with max-age14400, then new banner HTML requests the same URL; CSS is not fetched again (one legacy request) and summary display remains list-item instead of flex. Implement content-fingerprinted CSS filenames across all static pages and add a served-asset regression. No copy or layout changes.
 
 - Seven tests and production build pass. Same warmed browser, without clearing cache: old /styles.css remains cached (one request), new /styles.ba49023be133.css fetched once and summary display becomes flex. Desktop/mobile screenshots inspected. This reproduces and repairs the reported failure rather than requiring manual cache clearing. Publish next.
+
+- Cache fix7f2a32a pushed and Pages39147690002 dispatched. Keeps legacy stylesheet for old HTML compatibility, while all newly built pages request the content-specific CSS asset. The active browser retains its cache for final live acceptance.
+
+- Pages39147690002 succeeded for7f2a32a; public HTTP checks confirm all five pages request /styles.ba49023be133.css, HTTP200 and exact CSS bytes. Existing live browser also cached the HTML itself, so ordinary navigation still showed the earlier /styles.css link; checking normal Reload without clearing caches before final acceptance.
+
+- Live acceptance passed after ordinary Reload in the existing cached browser, with no cache clearing: versioned CSS requested, summary flex/11px, desktop/mobile screenshots inspected, mobile no overflow and keyboard toggle pass. All five public pages use the same verified content-specific CSS. Own cache fixture stopped.
