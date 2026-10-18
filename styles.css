@@ -15,3 +15,21 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
 .draft-note{font-size:13px;color:var(--muted);margin:26px 0 0}.legal-toc>p{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:16px}.legal-body article>section{margin-bottom:45px}.legal-body article h2{font-size:27px;margin-bottom:18px;letter-spacing:-.025em}.legal-body article p{font-size:16px}.not-found .hero-actions,.page-hero .hero-actions{margin-top:30px}
 @media(max-width:767px){.legal-body article h2{font-size:25px}.legal-body article p{font-size:15px}}
+.official-site-banner{color:var(--ink);background:var(--subtle);border-bottom:1px solid var(--line)}
+.official-site-banner details{max-width:calc(var(--max) + 96px);margin:0 auto}
+.official-site-banner summary{display:flex;align-items:center;flex-wrap:wrap;gap:6px 10px;min-height:34px;padding:5px 48px;font-size:11px;line-height:1.6;cursor:pointer;list-style:none}
+.official-site-banner summary::-webkit-details-marker{display:none}
+.official-site-banner summary::marker{content:""}
+.official-site-banner summary:focus-visible{outline:2px solid var(--blue);outline-offset:-3px}
+.official-site-mark{flex-shrink:0;color:var(--blue)}
+.official-site-toggle{display:inline-flex;align-items:center;gap:5px;color:var(--blue);text-decoration:underline;text-underline-offset:3px}
+.official-site-toggle svg{flex-shrink:0}
+.official-site-banner details[open] .official-site-toggle svg{transform:rotate(180deg)}
+.official-site-guidance{display:grid;grid-template-columns:1fr 1fr;gap:38px;padding:24px 48px 30px;border-top:1px solid var(--line)}
+.official-site-guidance>div{display:flex;gap:16px;align-items:flex-start;min-width:0}
+.official-site-guidance>div>svg{flex-shrink:0;color:var(--blue)}
+.official-site-guidance h2{font-size:14px;line-height:1.5;font-weight:600;margin:0 0 6px;letter-spacing:0;overflow-wrap:anywhere}
+.official-site-guidance p{font-size:13px;line-height:1.7;color:inherit;margin:0;overflow-wrap:anywhere}
+.official-site-guidance strong{font-weight:600}
+@media(max-width:767px){.official-site-banner summary{padding:8px 24px;font-size:11px;gap:2px 8px}.official-site-toggle{margin-left:26px}.official-site-guidance{grid-template-columns:1fr;gap:24px;padding:22px 24px 26px}.official-site-guidance>div{gap:12px}.official-site-guidance h2{font-size:13px}.official-site-guidance p{font-size:12px}}
+@media(max-width:380px){.official-site-banner summary{padding-inline:20px}.official-site-guidance{padding-inline:20px}}

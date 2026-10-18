@@ -5,9 +5,16 @@ const arrow = '<span aria-hidden="true">↗</span>';
 const dash = (path) => site.dashboard + path;
 const button = (label, href, variant = 'primary') => `<a class="button button-${variant}" href="${escape(href)}">${label}${arrow}</a>`;
 const image = (name, alt, extra = '') => `<img src="/assets/${name}" alt="${escape(alt)}" ${extra}>`;
+function officialSiteBanner() {
+  return `<section class="official-site-banner" aria-label="Official Cloud Nations website"><details>
+<summary><svg class="official-site-mark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 18h10a5 5 0 0 0 1-9.9A6 6 0 0 0 6.4 7.5 5.3 5.3 0 0 0 7 18Z" /></svg><span>An official website of Cloud Nations</span><span class="official-site-toggle">Here’s how you know<svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m3 6 5 5 5-5" /></svg></span></summary>
+<div class="official-site-guidance"><div><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m4 12 12-7 12 7H4ZM6 27h20M8 15v9m8-9v9m8-9v9" /></svg><div><h2>Official Cloud Nations websites use cloudnations.org</h2><p>Websites hosted at <strong>cloudnations.org</strong> or its verified subdomains belong to the Cloud Nations platform. Always check the full domain name before sharing information.</p></div></div>
+<div><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="7" y="14" width="18" height="14" rx="2" /><path d="M11 14V9a5 5 0 0 1 10 0v5m-5 6v3" /></svg><div><h2>Secure Cloud Nations websites use HTTPS</h2><p>HTTPS encrypts your connection to the website. Look for <strong>https://</strong> and check that your browser reports a secure connection. Only share sensitive information on trusted Cloud Nations pages.</p></div></div></div>
+</details></section>`;
+}
 function header(path) {
   const item = (label, href) => `<a href="${href}"${path === href ? ' aria-current="page"' : ''}>${label}</a>`;
-  return `<a class="skip-link" href="#main">Skip to content</a>
+  return `<a class="skip-link" href="#main">Skip to content</a>${path === '/' ? officialSiteBanner() : ''}
 <header class="site-header"><div class="container header-inner">
 <a class="brand" href="/" aria-label="Cloud Nations home">Cloud <strong>Nations</strong></a>
 <nav class="desktop-nav" aria-label="Main navigation">${item('Residency', '/#membership')}${item('Organizations', '/#organizations')}${item('Developers', '/#developers')}${item('About', '/about/')}${item('Support', '/support/')}</nav>
