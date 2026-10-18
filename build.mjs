@@ -1,6 +1,7 @@
 import { mkdir, readFile, writeFile, cp, rm } from 'node:fs/promises';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
 import { site } from './src/content.mjs';
 import { home, about, support, legal, notFound, layout } from './src/templates.mjs';
 export const root = dirname(fileURLToPath(import.meta.url));
@@ -17,10 +18,13 @@ export async function build({ production = false, legalApproved = false, output 
   if (output === root || !output.startsWith(root + '/')) throw new Error('Build output must be a child directory of this repository.');
   await rm(output, { recursive: true, force: true });
   await mkdir(output, { recursive: true });
+  const css = await readFile(resolve(root, 'styles.css'));
+  const stylesheet = `/styles.${createHash('sha256').update(css).digest('hex').slice(0, 12)}.css`;
+  await writeFile(resolve(output, stylesheet.slice(1)), css);
   for (const route of routes) {
     const file = route.path.endsWith('.html') ? route.path.slice(1) : route.path === '/' ? 'index.html' : route.path.slice(1) + 'index.html';
     await mkdir(dirname(resolve(output, file)), { recursive: true });
-    await writeFile(resolve(output, file), layout({ ...route, body: route.render(), production, legalApproved }));
+    await writeFile(resolve(output, file), layout({ ...route, body: route.render(), production, legalApproved, stylesheet }));
   }
   for (const file of ['styles.css', 'script.js', 'theme.js', 'favicon.svg']) await cp(resolve(root, file), resolve(output, file));
   await cp(resolve(root, 'assets'), resolve(output, 'assets'), { recursive: true });

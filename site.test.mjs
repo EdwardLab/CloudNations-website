@@ -91,3 +91,16 @@ test('homepage assets fit a bounded static-site budget',async()=>{
   assert(total<900_000,`Homepage image and font total ${total} bytes`);
   assert((await stat(resolve(output,'script.js'))).size<8000);
 });
+test('every page requests the published stylesheet independently of the legacy cached URL',async()=>{
+  const stylesheets=new Set();
+  for(const route of routes){
+    const html=await readFile(fileFor(route.path),'utf8');
+    const stylesheet=html.match(/<link rel="stylesheet" href="([^"]+)"/)[1];
+    assert.match(stylesheet,/^\/styles\.[a-f0-9]{12}\.css$/);
+    const response=await fetch(origin+stylesheet);
+    assert.equal(response.status,200);
+    assert.equal(await response.text(),await readFile(resolve(root,'styles.css'),'utf8'));
+    stylesheets.add(stylesheet);
+  }
+  assert.equal(stylesheets.size,1);
+});

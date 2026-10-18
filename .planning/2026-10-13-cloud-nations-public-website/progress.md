@@ -31,3 +31,9 @@
 - Source348cb51 pushed; manual Pages run39146453487 dispatched for the matching commit. No legal text change. Waiting for deployment, then test the public homepage and cached CSS in an actual browser.
 
 - Publication accepted: Pages39146453487 succeeded for348cb51. Public homepage contains one banner and complete guidance; served CSS matches source exactly. Live desktop/mobile screenshots inspected; native click and Enter toggles, computed styles and390px no-overflow checks pass. No DNS, legal text, identity service or mail changes.
+
+- User reports unstyled banner. Previous checks covered a fresh browser and current edge CSS, missing a returning browser with four-hour cached /styles.css. Inspecting current public headers and a warm-cache reproduction; replace the stable stylesheet URL with a content fingerprint, without changing visual design or copy.
+
+- Root cause reproduced in a real returning browser: old stable CSS cached with max-age14400, then new banner HTML requests the same URL; CSS is not fetched again (one legacy request) and summary display remains list-item instead of flex. Implement content-fingerprinted CSS filenames across all static pages and add a served-asset regression. No copy or layout changes.
+
+- Seven tests and production build pass. Same warmed browser, without clearing cache: old /styles.css remains cached (one request), new /styles.ba49023be133.css fetched once and summary display becomes flex. Desktop/mobile screenshots inspected. This reproduces and repairs the reported failure rather than requiring manual cache clearing. Publish next.
