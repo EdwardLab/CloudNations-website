@@ -30,3 +30,8 @@ Changes to Privacy and Terms must reflect actual operations. The source contains
 The deployed customer copy uses KYC on the homepage and in help articles. Browser checks passed for the ID front/back switch, Wallet FAQ, mobile menu, KYC help search, theme switching and support email copying. At 390 px the tested homepage and support flow have no horizontal overflow. The local preview remains available at http://127.0.0.1:3210. The identity service health endpoint still reports ok.
 
 The GitHub origin certificate remains pending; the public HTTPS certificate is served by Cloudflare. Existing zone encryption settings were not changed. Website and support URLs are ready to use in the Google Wallet console. The console form remains unsaved pending its required business category; publishing approval was not submitted.
+
+
+## Homepage official-site banner — 19 October 2026
+
+Commit `348cb51`, published by successful manual Pages run `39146453487`, adds the identity platform’s official-site banner to the homepage. The approved domain and HTTPS guidance, cloud icon and native disclosure match the platform. Six static tests, production build, keyboard toggles, dark/light modes and320/390/768/1440px layouts pass locally. Public HTTPS content and CSS match; live desktop/mobile disclosure and screenshots pass. Identity-platform, DNS and mail settings were not changed.

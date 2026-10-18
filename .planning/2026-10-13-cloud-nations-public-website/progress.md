@@ -27,3 +27,7 @@
 - Homepage native disclosure and responsive theme styles implemented; all six existing static-site tests and preview build pass. Approved copy has zero phrase violations. The one soft staccato hint is caused by separately extracted UI headings and inline strong elements, so the exact requested copy is protected. Local preview3210 started; desktop/mobile/keyboard browser acceptance next.
 
 - Local acceptance passed: all six static tests, production build, Enter and click opening/closing,320/390/768/1440 widths without horizontal overflow and dark/light themes. Desktop and mobile screenshots inspected. Temporary browser command syntax corrected to the CLI async-function form; no product error. Copy reused unchanged from the approved platform banner. Publishing the independent Pages website next.
+
+- Source348cb51 pushed; manual Pages run39146453487 dispatched for the matching commit. No legal text change. Waiting for deployment, then test the public homepage and cached CSS in an actual browser.
+
+- Publication accepted: Pages39146453487 succeeded for348cb51. Public homepage contains one banner and complete guidance; served CSS matches source exactly. Live desktop/mobile screenshots inspected; native click and Enter toggles, computed styles and390px no-overflow checks pass. No DNS, legal text, identity service or mail changes.
