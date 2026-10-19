@@ -1,6 +1,6 @@
 # Cloud Nations website
 
-An independent static website for `cloudnations.org`, operated by EdgeAlphix LLC. English content, self-hosted assets and no runtime dependencies. The identity platform remains at `id.cloudnations.org`.
+An independent static website for `cloudnations.org`, operated by EdgeAlphix LLC. English content, self-hosted assets and no runtime dependencies. The identity platform runs at `portal.cloudnations.org`; the old `id.cloudnations.org` links remain compatible.
 
 ## Local preview
 
