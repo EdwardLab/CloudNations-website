@@ -40,3 +40,7 @@ Commit `348cb51`, published by successful manual Pages run `39146453487`, adds t
 ## Returning-browser CSS repair — 19 October 2026
 
 The first banner acceptance used a fresh browser and missed the four-hour cached legacy stylesheet. A returning-browser reproduction confirmed the banner HTML could load while `/styles.css` remained the pre-banner version. Commit `7f2a32a`, published by successful Pages run `39147690002`, gives every page a content-fingerprinted stylesheet filename. Seven tests pass. The same warm-cache browser loads the corrected style without clearing caches; ordinary Reload updates already-cached HTML. Public five-page asset checks and live desktop/mobile disclosure checks pass.
+
+## Support contact update — October 21, 2026
+
+Release2a9a75a replaces the customer-support mailbox with contact@cloudnations.org across the shared footer, support page, privacy notice and terms. All seven checks passed in publication run39459165111. Browser read-back verified the new address on all five pages and no old contact address in their HTML. Cloudflare Email Routing shows contact@cloudnations.org Active to the existing Mailflare worker. No routing changes or test email were made.
