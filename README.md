@@ -32,7 +32,7 @@ The tests check all routes, internal links and fragments, asset existence, busin
 
 Pages: `/`, `/about/`, `/support/`, `/privacy/`, `/terms/`, `/404.html`.
 
-Links to applications, accounts, organizations and developers open existing identity-platform routes. This site does not collect credentials, documents or card details. Help search stays in the browser. Support uses `contact@edgealphix.com` mail links; no email was sent as part of acceptance.
+Links to applications, accounts, organizations and developers open existing identity-platform routes. This site does not collect credentials, documents or card details. Help search stays in the browser. Support uses `contact@cloudnations.org` mail links; no email was sent as part of acceptance.
 
 ## Publication
 

@@ -56,7 +56,7 @@ test('business terms, Wallet actions and fictional examples are present',async()
   assert.match(home,/Complete KYC/);assert(!/Didit/.test(home+about+support));
   assert.match(about,/10,000/);assert.match(about,/January 1, 2028 UTC/);
   assert.match(about,/Founding Resident · 2026/);assert(!/Test only|demo mode|publishing approval|in testing/i.test(home+about+support));
-  assert.match(support,/contact@edgealphix\.com/);assert(!support.includes('<form'));
+  assert.match(support,/mailto:contact@cloudnations\.org/);assert(!/contact@edgealphix\.com/.test(home+about+support));assert(!support.includes('<form'));
   for(const page of ['/privacy/','/terms/'])assert.match(await readFile(fileFor(page),'utf8'),/Review draft\. Not yet published/);
 });
 test('preview HTTP routes, redirects, 404 and MIME types work',async()=>{

@@ -2,7 +2,7 @@ export const site = {
   name: 'Cloud Nations',
   origin: 'https://cloudnations.org',
   dashboard: 'https://portal.cloudnations.org',
-  support: 'contact@edgealphix.com',
+  support: 'contact@cloudnations.org',
   operator: 'EdgeAlphix LLC',
   reviewDate: '2026-10-13',
 };

@@ -3,7 +3,7 @@
 This repository is independent of the identity platform in `CloudNations-dashboard`.
 
 - Product copy, code and comments are English. Audit new page copy with the user's unslop skill.
-- Operator: EdgeAlphix LLC. Support: contact@edgealphix.com.
+- Operator: EdgeAlphix LLC. Support: contact@cloudnations.org.
 - Keep the site static, using shared templates and Node.js built-ins. Assets are self-hosted.
 - Use fictional, clearly marked examples. Do not copy resident data or production secrets.
 - The user approved publication on October 13, 2026. Publish only this separate website to its GitHub Pages repository and domain; preserve identity-platform and mail services.
