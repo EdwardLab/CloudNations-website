@@ -52,17 +52,24 @@ test('business terms, Wallet actions and fictional examples are present',async()
   assert.match(home,/\$19\.99/);assert.match(home,/\$49\.99/);
   assert.match(home,/fees are non-refundable/);assert.match(home,/basic account reports unverified/);
   assert.match(home,/Apple Wallet is coming soon/);assert.match(home,/add your Digital Resident ID to Google Wallet/);
-  assert.match(home,/Example credential\. Fictional details\./);
-  assert.match(home,/Complete KYC/);assert(!/Didit/.test(home+about+support));
+  assert.match(home,/aria-label="Sample Digital Resident ID"/);
+  const hero = home.slice(home.indexOf('<section class="hero"'), home.indexOf('<section class="identity section"'));
+  assert.match(hero,/\$19\.99 for five years/);
+  assert.match(hero,/href="https:\/\/portal\.cloudnations\.org\/application">Apply for Residency/);
+  assert.match(hero,/href="#verify-example"/);
+  assert.match(home,/<dd id="example-cnid"[^>]*>•••• •••• 6064<\/dd>/);
+  assert.match(home,/<div id="example-legal-name" hidden>/);
+  assert.match(home,/<script src="\/script\.[a-f0-9]{12}\.js" defer>/);
+  assert.match(home,/You’ll need a government ID and a liveness check/);assert(!/Didit/.test(home+about+support));
   assert.match(about,/10,000/);assert.match(about,/January 1, 2028 UTC/);
   assert.match(about,/Founding Resident · 2026/);assert(!/Test only|demo mode|publishing approval|in testing/i.test(home+about+support));
   assert.match(support,/mailto:contact@cloudnations\.org/);assert(!/contact@edgealphix\.com/.test(home+about+support));assert(!support.includes('<form'));
-  for(const page of ['/privacy/','/terms/'])assert.match(await readFile(fileFor(page),'utf8'),/Review draft\. Not yet published/);
+  for(const page of ['/privacy/','/terms/'])assert.match(await readFile(fileFor(page),'utf8'),/Draft dated October 13, 2026/);
 });
 test('preview HTTP routes, redirects, 404 and MIME types work',async()=>{
   for(const route of routes){const response=await fetch(origin+route.path);assert.equal(response.status,200);assert.match(response.headers.get('content-type'),/text\/html/);assert.match(response.headers.get('x-robots-tag'),/noindex/);}
   const redirect=await fetch(origin+'/support',{redirect:'manual'});assert.equal(redirect.status,308);assert.equal(redirect.headers.get('location'),'/support/');
-  const missing=await fetch(origin+'/missing-page/');assert.equal(missing.status,404);assert.match(await missing.text(),/This page/);
+  const missing=await fetch(origin+'/missing-page/');assert.equal(missing.status,404);assert.match(await missing.text(),/Page not found/);
   const image=await fetch(origin+'/assets/hero-1200.webp');assert.equal(image.headers.get('content-type'),'image/webp');
   const head=await fetch(origin+'/styles.css',{method:'HEAD'});assert.equal(head.status,200);assert.equal(await head.text(),'');
   assert.equal((await fetch(origin+'/.env')).status,404);
@@ -75,7 +82,7 @@ test('production requires explicit legal approval and emits correct publishing a
   assert.match(html,/content="index,follow"/);
   for(const page of ['privacy','terms']){
     const legal=await readFile(resolve(published,page,'index.html'),'utf8');
-    assert(!/Review draft|Not yet published|local preview|before this draft is published/.test(legal));
+    assert(!/Draft dated|Review draft|Not yet published|local preview|before this draft is published/.test(legal));
     assert.match(legal,/Updated October 13, 2026/);
   }
   assert.equal(await readFile(resolve(published,'CNAME'),'utf8'),'cloudnations.org\n');

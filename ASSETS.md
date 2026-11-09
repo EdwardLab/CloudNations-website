@@ -21,7 +21,7 @@ Generation instructions excluded logos, readable screen content, flags, badges a
 
 `id-front.webp`, `id-back.webp` and `certificate.webp` were exported with the existing Cloud Nations identity image and PDF certificate renderers at dashboard release `b23f741`. A standalone fixture replaced database, identity decoding, signing and notification dependencies; it did not connect to a database, issue a real number, use a signing key or change production.
 
-Example details are fictional: Maya Ellis, birth date April 18, 1997, USA, number `5839 1742 6064`, issue October 13, 2026 and expiry October 13, 2031. The portrait was generated for this fictional example. Test flags keep SAMPLE labels in the ID and certificate. The website adds an Example caption and descriptive alternative text. QR links point to a nonexistent example credential, never a real resident record.
+Example details are fictional: Maya Ellis, birth date April 18, 1997, USA, number `5839 1742 6064`, issue October 13, 2026 and expiry October 13, 2031. The portrait was generated for this fictional example. Test flags keep SAMPLE labels in the ID and certificate. The website adds an Example caption and descriptive alternative text. The homepage overlays `id-example-qr.svg` on the front image. It opens the fictional verification example on the homepage. The underlying ID and certificate images retain their original sample QR codes.
 
 The certificate image is a raster export, not a valid signed PDF. The fixture's placeholder proof is not published. Poppler rendered the PDF to PNG; Sharp encoded the final WebP.
 

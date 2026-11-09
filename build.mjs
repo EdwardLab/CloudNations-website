@@ -6,8 +6,8 @@ import { site } from './src/content.mjs';
 import { home, about, support, legal, notFound, layout } from './src/templates.mjs';
 export const root = dirname(fileURLToPath(import.meta.url));
 export const routes = [
-  { path: '/', title: 'Cloud Nations | Identity Beyond Borders', description: 'Cloud Residency: a private digital identity and community participation. $19.99 for five years, with identity verification included.', render: home },
-  { path: '/about/', title: 'About | Cloud Nations', description: 'A private digital identity and community network operated by EdgeAlphix LLC. One identity. Anywhere online.', render: about },
+  { path: '/', title: 'Cloud Nations | Digital Resident ID', description: 'Apply for a Digital Resident ID. Cloud Residency costs $19.99 for five years and includes identity verification.', render: home },
+  { path: '/about/', title: 'About | Cloud Nations', description: 'A private digital identity and community network operated by EdgeAlphix LLC.', render: about },
   { path: '/support/', title: 'Support | Cloud Nations', description: 'Get help with Cloud Nations applications, verification, accounts, billing, credentials and Wallet.', render: support },
   { path: '/privacy/', title: 'Privacy | Cloud Nations', description: 'How Cloud Nations handles website, account, verification and public profile information.', render: () => legal('privacy') },
   { path: '/terms/', title: 'Terms of Service | Cloud Nations', description: 'Cloud Nations residency eligibility, application fees, verification, permanent identifiers and renewal rules.', render: () => legal('terms') },
@@ -16,15 +16,24 @@ export const routes = [
 export async function build({ production = false, legalApproved = false, output = resolve(root, 'dist') } = {}) {
   if (production && !legalApproved) throw new Error('Publication requires reviewed legal pages. Pass --legal-approved only after operator approval.');
   if (output === root || !output.startsWith(root + '/')) throw new Error('Build output must be a child directory of this repository.');
+  const previewPortal = !production && process.env.CLOUD_NATIONS_PREVIEW_PORTAL;
+  if (previewPortal && !/^http:\/\/localhost:[1-9]\d{0,4}$/.test(previewPortal)) throw new Error('Use a localhost portal URL for preview.');
+
   await rm(output, { recursive: true, force: true });
   await mkdir(output, { recursive: true });
   const css = await readFile(resolve(root, 'styles.css'));
   const stylesheet = `/styles.${createHash('sha256').update(css).digest('hex').slice(0, 12)}.css`;
   await writeFile(resolve(output, stylesheet.slice(1)), css);
+  const javascript = await readFile(resolve(root, 'script.js'));
+  const script = `/script.${createHash('sha256').update(javascript).digest('hex').slice(0, 12)}.js`;
+  await writeFile(resolve(output, script.slice(1)), javascript);
   for (const route of routes) {
     const file = route.path.endsWith('.html') ? route.path.slice(1) : route.path === '/' ? 'index.html' : route.path.slice(1) + 'index.html';
     await mkdir(dirname(resolve(output, file)), { recursive: true });
-    await writeFile(resolve(output, file), layout({ ...route, body: route.render(), production, legalApproved, stylesheet }));
+    const html = layout({ ...route, body: route.render(), production, legalApproved, stylesheet, script });
+    await writeFile(resolve(output, file), previewPortal
+      ? html.replaceAll(`href="${site.dashboard}/application"`, `href="${previewPortal}/application"`)
+      : html);
   }
   for (const file of ['styles.css', 'script.js', 'theme.js', 'favicon.svg']) await cp(resolve(root, file), resolve(output, file));
   await cp(resolve(root, 'assets'), resolve(output, 'assets'), { recursive: true });

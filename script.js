@@ -36,14 +36,88 @@
   document.addEventListener('keydown', event => { if (event.key === 'Escape' && !menu.hidden) closeMenu(true); });
   document.addEventListener('click', event => { if (!menu.hidden && !event.target.closest('.site-header')) closeMenu(); });
   matchMedia('(min-width: 1024px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
-  document.querySelectorAll('[data-id-side]').forEach(button => button.addEventListener('click', () => {
-    document.querySelectorAll('[data-id-side]').forEach(item => {
-      const selected = item === button;
-      item.setAttribute('aria-pressed', String(selected));
-      item.classList.toggle('selected', selected);
-      document.getElementById(`id-${item.dataset.idSide}`).hidden = !selected;
+  const stage = document.querySelector('[data-id-stage]');
+  if (stage) {
+    const model = stage.querySelector('.id-model');
+    const faces = [stage.querySelector('.id-face-front'), stage.querySelector('.id-face-back')];
+    const controls = document.querySelector('.id-switch');
+    const sides = [...controls.querySelectorAll('[data-id-side]')];
+    let rotation;
+    let side = 0;
+    let drag;
+
+    function display(nextRotation) {
+      rotation = nextRotation;
+      model.style.transform = rotation.toString();
+      const visibleSide = rotation.m33 < 0 ? 1 : 0;
+      if (visibleSide === side) return;
+      side = visibleSide;
+      faces.forEach((face, index) => { face.inert = index !== side; });
+      sides.forEach((button, index) => {
+        button.classList.toggle('selected', index === side);
+        button.setAttribute('aria-pressed', String(index === side));
+      });
+    }
+
+    function rotate(horizontal, vertical) {
+      const current = rotation ?? new DOMMatrix(getComputedStyle(model).transform);
+      const turn = new DOMMatrix().rotateAxisAngleSelf(-vertical, horizontal, 0, Math.hypot(horizontal, vertical));
+      display(current.preMultiplySelf(turn));
+    }
+
+    stage.dataset.ready = '';
+    stage.tabIndex = 0;
+    controls.hidden = false;
+    document.querySelector('[data-id-hint]').hidden = false;
+
+    sides.forEach((button, index) => button.addEventListener('click', () => {
+      display(new DOMMatrix().rotateAxisAngleSelf(0, 1, 0, index * 180));
+    }));
+
+    const arrowTurns = { ArrowLeft: [-12, 0], ArrowRight: [12, 0], ArrowUp: [0, -12], ArrowDown: [0, 12] };
+    stage.addEventListener('keydown', event => {
+      if (event.target !== stage || !Object.hasOwn(arrowTurns, event.key)) return;
+      event.preventDefault();
+      rotate(...arrowTurns[event.key]);
     });
-  }));
+
+    stage.addEventListener('pointerdown', event => {
+      if (!event.isPrimary || event.button !== 0 || event.target.closest('a')) return;
+      drag = { id: event.pointerId, x: event.clientX, y: event.clientY, degreesPerPixel: 360 / stage.clientWidth, active: false };
+      stage.setPointerCapture(drag.id);
+    });
+    stage.addEventListener('pointermove', event => {
+      if (event.pointerId !== drag?.id) return;
+      const dx = event.clientX - drag.x;
+      const dy = event.clientY - drag.y;
+      if (!dx && !dy || !drag.active && Math.hypot(dx, dy) < 4) return;
+      drag.active = true;
+      stage.classList.add('is-dragging');
+      drag.x = event.clientX;
+      drag.y = event.clientY;
+      rotate(dx * drag.degreesPerPixel, dy * drag.degreesPerPixel);
+    });
+    for (const event of ['pointerup', 'pointercancel', 'lostpointercapture']) {
+      stage.addEventListener(event, pointer => {
+        if (pointer.pointerId !== drag?.id) return;
+        stage.classList.remove('is-dragging');
+        drag = null;
+      });
+    }
+  }
+  const example = document.getElementById('example-disclosure');
+  if (example) {
+    const showNumber = document.getElementById('example-show-cnid');
+    const showName = document.getElementById('example-show-name');
+    function showExample() {
+      document.getElementById('example-cnid').textContent = showNumber.checked ? '5839 1742 6064' : '•••• •••• 6064';
+      document.getElementById('example-legal-name').hidden = !showName.checked;
+    }
+    example.addEventListener('change', showExample);
+    addEventListener('pageshow', showExample);
+    showExample();
+    example.hidden = false;
+  }
   const search = document.getElementById('help-search');
   if (search) {
     const category = document.getElementById('help-category');
