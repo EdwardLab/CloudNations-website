@@ -1,4 +1,14 @@
 (() => {
+  const sale = document.querySelector('.sale-banner');
+  if (sale) {
+    const deadline = Date.parse(sale.querySelector('time').dateTime);
+    const updateSale = () => { sale.hidden = Date.now() >= deadline; };
+    updateSale();
+    if (!sale.hidden) window.setTimeout(updateSale, deadline - Date.now());
+    window.addEventListener('pageshow', updateSale);
+    document.addEventListener('visibilitychange', updateSale);
+  }
+
   const root = document.documentElement;
   const themeButton = document.querySelector('.theme-toggle');
   function describeTheme() {

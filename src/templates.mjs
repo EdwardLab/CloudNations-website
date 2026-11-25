@@ -30,7 +30,11 @@ export function layout({ title, description, path, body, production = false, leg
 }
 const accordion = (title, body) => `<details class="accordion"><summary>${escape(title)}<span aria-hidden="true">+</span></summary><div class="answer"><p>${escape(body)}</p></div></details>`;
 export function home() {
-  return `<section class="hero"><div class="container hero-content">
+  return `<aside class="sale-banner" aria-label="Black Friday sale" hidden>
+<div class="container sale-banner-inner"><p><strong>Black Friday sale</strong><br class="sale-banner-break"> Five years of Cloud Residency for <strong>$4.99</strong> with code <strong class="sale-banner-code">CLOUDFRIDAY</strong>.</p>
+<p class="sale-banner-deadline">First-time applicants only. Ends <time datetime="2026-11-28T05:00:00Z">Nov. 27 at 11:59 p.m. ET</time>.</p>
+<a href="${dash('/application')}" data-residency-apply>Apply for Residency ${arrow}</a></div></aside>
+<section class="hero"><div class="container hero-content">
 <div class="hero-copy"><p class="hero-label">Cloud Residency</p><h1>Get your Digital Resident ID</h1><p class="hero-lede">Choose which details people see when they scan your ID. After verification, you get a permanent CNID and a downloadable certificate.</p><p class="hero-price"><strong>$19.99 for five years</strong><span>Pay once, then verify your identity. Verification is included.</span></p><div class="hero-actions">${button('Apply for Residency', dash('/application'))}<a class="text-link" href="#verify-example">Try QR verification ${arrow}</a></div></div>
 <figure class="card-showcase">
 <div class="id-images" data-id-stage role="group" aria-label="Sample Digital Resident ID" aria-keyshortcuts="ArrowLeft ArrowRight ArrowUp ArrowDown">

@@ -106,3 +106,14 @@
 .verification-example label{display:inline-flex;align-items:center;min-height:36px;margin-right:1rem;gap:.4rem;cursor:pointer}
 .verification-example input{accent-color:var(--blue)}
 @media(max-width:767px){.hero .hero-content{grid-template-columns:1fr;gap:1.5rem;padding-block:2rem}.hero .hero-content h1{font-size:clamp(2.35rem,9.8vw,4.5rem)}.hero .hero-lede{line-height:1.45}.hero .hero-actions{gap:.75rem}}
+
+.sale-banner{background:#17254a;color:#fff}
+.sale-banner-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px 28px;padding-block:14px}
+.sale-banner p{margin:0;font-size:14px}
+.sale-banner p:first-child>strong:first-child{margin-right:8px}
+.sale-banner-code{white-space:nowrap;letter-spacing:.035em}
+.sale-banner .sale-banner-deadline{color:#d2dcf8;font-size:13px}
+.sale-banner a{display:inline-flex;align-items:center;gap:9px;min-height:32px;font-size:14px;font-weight:600;text-decoration:underline;text-underline-offset:4px}
+.sale-banner a:focus-visible{outline-color:#d2dcf8}
+.sale-banner-break{display:none}
+@media(max-width:767px){.sale-banner-break{display:initial}}
